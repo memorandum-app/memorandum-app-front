@@ -1,3 +1,5 @@
+// import './vendors/google-code-prettify/prettify';
+
 export const state = () => ({
     articleInfo: {
         articleId: "",
@@ -5,6 +7,7 @@ export const state = () => ({
         authorId: "",
         author: "",
         category: "",
+        createdDate: null,
         articleTag: [],
         articleItem: []
     },
@@ -13,12 +16,15 @@ export const state = () => ({
 
 export const mutations = {
     getArticleInfo(state, payload) {
+        const dummyDate = new Date()
+        // console.log(dummyDate.getMonth())
         state.articleInfo = {
             articleId: "ABcd1234",
             articleTitle: "記事タイトル",
             authorId: "1234abCD",
             author: "佐々木テポドン",
             category: "Java",
+            createdDate: `${dummyDate.getFullYear()}/${dummyDate.getMonth()+1}/${dummyDate.getDate()}`,
             articleTag: ["Spring Boot","Mysql","Mybatis"],
             articleItem: [
                 {
