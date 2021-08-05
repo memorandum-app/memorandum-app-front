@@ -27,6 +27,7 @@ export default {
     '~/assets/css/skins/doxy.css',
     '~/assets/css/skins/sons-of-obsidian.css',
     '~/assets/css/skins/sunburst.css',
+    '~/assets/css/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
