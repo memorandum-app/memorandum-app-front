@@ -21,11 +21,19 @@ export default {
 
   // Global CSS: https://go.nuxtjs.dev/config-css
   css: [
-    '~/assets/css/reboot/normalize.css'
+    '~/assets/css/reboot/normalize.css',
+    '~/assets/css/prettify/prettify.css',
+    '~/assets/css/skins/desert.css',
+    '~/assets/css/skins/doxy.css',
+    '~/assets/css/skins/sons-of-obsidian.css',
+    '~/assets/css/skins/sunburst.css',
+    '~/assets/css/style.scss'
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
+    { src: '~/plugins/run_prettify.js'},
+    { src: '~/plugins/lang-css.js'}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
