@@ -50,8 +50,17 @@ export default {
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
-  axios: {},
-
+  axios: {
+    // prefix: '/api',
+    proxy: true,
+    credentials: true,
+  },
+  // proxy: {
+  //   '/api/': { target: `http://localhost:8080/article`, pathRewrite: {'^/api/': ''} }
+  // },
+  // proxy: {
+  //   '/article/': 'http://localhost:3000'
+  // },
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
     babel: {
