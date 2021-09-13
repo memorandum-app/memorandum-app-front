@@ -58,9 +58,7 @@ import { mapActions } from "vuex";
 export default {
   data() {
     return {
-      articleInfo: {},
-      articleList: [],
-      // msg: 'hello'
+      articleInfo: {}
     };
   },
   created() {
@@ -72,18 +70,11 @@ export default {
     });
   },
   methods: {
-    test() {
-      console.log('testbbbbbbbbbbb');
-       this.getArticleInfo(String(this.$route.params.articleId));
-       console.log('testcccccccccc');
-    },
     init() {
       this.getArticleInfo(String(this.$route.params.articleId));
       this.articleInfo = this.$store.state.Article.articleInfo;
-      this.getArticleList();
-      this.articleList = this.$store.state.Article.articleList;
     },
-    ...mapActions("Article", ["getArticleInfo", "getArticleList"])
+    ...mapActions("Article", ["getArticleInfo"])
   }
 };
 </script>
