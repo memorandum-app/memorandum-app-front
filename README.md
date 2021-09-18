@@ -9,4 +9,5 @@
  - pull requestを作成したらマージ依頼を出す
  
  #### ブランチ命名規則
- #{ issue No } _ { memorandum_app_ } _ { 任意の修正に関する名前(英語) }
+ph{ ph No }-no{ issue No }-{ タスクに関する名前(英語で単語はハイフン区切り) }
+ex) ph1-no3-test-branch-name
