@@ -41,17 +41,16 @@ export const actions = {
         })
         .then(response => {
             const value = {
-                articleId: response.data.article_id,
-                articleTitle: response.data.article_title,
-                authorId: response.data.author_id,
-                author: response.data.author_name,
+                articleId: response.data.articleId,
+                articleTitle: response.data.articleTitle,
+                authorId: response.data.authorId,
+                author: response.data.authorName,
                 language: response.data.language,
                 category: response.data.category,
-                createDate: response.data.created_date,
-                updateDate: response.data.update_date,
-                articleItem: response.data.article_content_list
+                createDate: response.data.createdDate,
+                updateDate: response.data.updateDate,
+                articleItem: response.data.articleContentList
             }
-            console.log(response);
             commit('getArticleInfo', value);
         })
         .catch(error => {

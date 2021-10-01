@@ -1,6 +1,5 @@
 <template>
   <div class="article-main-container">
-    <!-- <button @click="test">testButton</button> -->
     <div class="title">
       <p>{{ articleInfo.author }} {{ articleInfo.createdDate }}</p>
       <h1>{{ articleInfo.articleTitle }}</h1>
@@ -70,10 +69,10 @@ export default {
     });
   },
   methods: {
-    init() {
-      this.getArticleInfo(String(this.$route.params.articleId));
-      this.articleInfo = this.$store.state.Article.articleInfo;
-    },
+      init() {
+        this.getArticleInfo(String(this.$route.params.articleId));
+        this.articleInfo = this.$store.state.Article.articleInfo;
+      },
     ...mapActions("Article", ["getArticleInfo"])
   }
 };
